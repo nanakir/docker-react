@@ -9,7 +9,7 @@ RUN npm run build
 
 # run phase
 FROM nginx
-EXPOSE 80
+#EXPOSE 80
 COPY --from=0 /app/build /usr/share/nginx/html
 
 # default of this container will start nginx on its own; no need for RUN
